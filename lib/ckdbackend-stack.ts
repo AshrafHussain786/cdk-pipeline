@@ -23,5 +23,14 @@ export class CkdbackendStack extends cdk.Stack {
         type: ddb.AttributeType.STRING,
       },      
     });
+
+    const dynamoDBTable3 = new ddb.Table(this, 'Table3', { 
+      billingMode: ddb.BillingMode.PAY_PER_REQUEST,     
+      partitionKey: {
+        name: 'id',
+        type: ddb.AttributeType.STRING,
+      },      
+    });
+
   }
 }
