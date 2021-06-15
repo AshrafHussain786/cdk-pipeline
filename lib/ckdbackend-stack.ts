@@ -16,7 +16,7 @@ export class CkdbackendStack extends cdk.Stack {
       },      
     });    
 
-    const dynamoDBTable2 = new ddb.Table(this, 'Table2a', { 
+    const dynamoDBTable2 = new ddb.Table(this, 'Table2', { 
       billingMode: ddb.BillingMode.PAY_PER_REQUEST,     
       partitionKey: {
         name: 'id',
